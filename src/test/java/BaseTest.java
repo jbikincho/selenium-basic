@@ -1,4 +1,4 @@
-import io.github.bonigarcia.wdm.BrowserManager;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -10,8 +10,8 @@ public class BaseTest {
 
     @BeforeAll
     public static void setupDriver() {
-        BrowserManager instance = WebDriverManager.getInstance(ChromeDriver.class);
-        instance.setup();
+        WebDriverManager driverManager = WebDriverManager.getInstance(ChromeDriver.class);
+        driverManager.driverVersion("96.0.4664.45").setup();
         driver = new ChromeDriver();
     }
 
