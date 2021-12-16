@@ -30,6 +30,12 @@ dependencies {
     implementation('io.github.bonigarcia:webdrivermanager:5.0.2') {
         exclude group: 'org.seleniumhq.selenium'
     }
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
 
 test {
